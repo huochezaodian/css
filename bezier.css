@@ -1,0 +1,35 @@
+.item , .wrapper {
+    width: var(--px60);
+    height: var(--px60);
+    display: inline-block;
+}
+
+.item {
+    border-radius: 50%;
+    background: radial-gradient(circle, #2f47cc, #000);
+    animation: item-animate 3s linear .5s forwards; 
+    animation-timing-function: cubic-bezier(.06,.76,1,.24);
+}
+
+.wrapper {
+    animation: wrapper-animate 3s linear .5s forwards; 
+    animation-timing-function: cubic-bezier(.73,.03,.26,1.01);
+}
+
+@keyframes item-animate {
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    to {
+        transform: matrix(1, 0, 0, 1, 400, 0);
+    }
+}
+
+@keyframes wrapper-animate {
+    from {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    to {
+        transform: matrix(1, 0, 0, 1, 0, 400);
+    }
+}
